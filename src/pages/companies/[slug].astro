@@ -61,7 +61,7 @@ const companyResult = await sql`
     notable_deals
   FROM companies
   WHERE slug = ${slug}
-    AND (company_type IN ('placement_agent', 'executive_assistant_recruiters') OR type = 'placement_agent')
+    AND company_type IN ('placement_agent', 'executive_assistant_recruiters')
     AND status = 'published'
   LIMIT 1
 `;
