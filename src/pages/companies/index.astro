@@ -7,14 +7,11 @@ const companies = await sql`
     id,
     name,
     slug,
-    type,
-    company_type,
     description,
     headquarters,
     logo_url,
     specializations,
-    global_rank,
-    created_at
+    global_rank
   FROM companies
   WHERE status = 'published'
     AND company_type = 'placement_agent'
@@ -30,8 +27,9 @@ const companies = await sql`
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top Private Equity Placement Agents Directory | Placement</title>
-  <meta name="description" content="Comprehensive directory of leading private equity placement agents and PE fundraising experts">
+  <title>Top Private Equity Placement Agents | Placement</title>
+  <meta name="description" content="Directory of leading private equity placement agents">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
   <!-- Navigation -->
@@ -55,9 +53,9 @@ const companies = await sql`
   <!-- Page Header -->
   <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">PE Fundraising & Placement Recruitment Agencies</h1>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Private Equity Placement Agents</h1>
       <p class="text-xl text-blue-100 max-w-3xl">
-        Comprehensive profiles of leading <strong>PE Fundraising placement agenties</strong> and <strong>Placement placement agenties</strong> specializing in executive-level placements.
+        Comprehensive directory of leading placement agents specializing in private equity fundraising.
       </p>
     </div>
   </div>
@@ -66,7 +64,7 @@ const companies = await sql`
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     {companies.length === 0 ? (
       <div class="text-center py-12">
-        <p class="text-gray-600 text-lg">No companies found. Check back soon!</p>
+        <p class="text-gray-600 text-lg">No companies found.</p>
       </div>
     ) : (
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -75,7 +73,6 @@ const companies = await sql`
             href={`/companies/${company.slug}`}
             class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6 block"
           >
-            <!-- Company Logo -->
             {company.logo_url && (
               <div class="mb-4 h-12 flex items-center">
                 <img
@@ -86,7 +83,6 @@ const companies = await sql`
               </div>
             )}
 
-            <!-- Company Name & Rank -->
             <div class="flex items-start justify-between mb-3">
               <h2 class="text-xl font-bold text-gray-900 flex-1">
                 {company.name}
@@ -98,21 +94,18 @@ const companies = await sql`
               )}
             </div>
 
-            <!-- Location -->
             {company.headquarters && company.headquarters !== 'Unavailable from provided context' && (
               <div class="text-sm text-gray-600 mb-3">
                 📍 {company.headquarters}
               </div>
             )}
 
-            <!-- Description -->
             {company.description && (
               <p class="text-gray-600 text-sm mb-4 line-clamp-3">
                 {company.description}
               </p>
             )}
 
-            <!-- Specializations -->
             {company.specializations && company.specializations.length > 0 && (
               <div class="flex flex-wrap gap-2">
                 {company.specializations.slice(0, 3).map((spec: string) => (
@@ -139,20 +132,20 @@ const companies = await sql`
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <div>
           <h3 class="text-lg font-bold mb-4">Placement</h3>
-          <p class="text-gray-400 text-sm">Your source for private equity placement agent insights and industry news.</p>
+          <p class="text-gray-400 text-sm">Leading directory of private equity placement agents.</p>
         </div>
         <div>
           <h3 class="text-lg font-bold mb-4">Navigate</h3>
           <ul class="space-y-2 text-sm">
             <li><a href="/" class="text-gray-400 hover:text-white">Home</a></li>
             <li><a href="/articles" class="text-gray-400 hover:text-white">Articles</a></li>
-            <li><a href="/companies" class="text-gray-400 hover:text-white">Companies Directory</a></li>
+            <li><a href="/companies" class="text-gray-400 hover:text-white">Companies</a></li>
           </ul>
         </div>
         <div>
           <h3 class="text-lg font-bold mb-4">Resources</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="/companies" class="text-gray-400 hover:text-white">Top Recruitment Agencies</a></li>
+            <li><a href="/companies" class="text-gray-400 hover:text-white">Top Placement Agents</a></li>
             <li><a href="/articles" class="text-gray-400 hover:text-white">Industry News</a></li>
           </ul>
         </div>
