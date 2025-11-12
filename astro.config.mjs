@@ -48,32 +48,36 @@ export default defineConfig({
         translations: {
           en: {
             consentModal: {
-              title: 'We use cookies',
-              description: 'We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept all", you consent to our use of cookies.',
-              acceptAllBtn: 'Accept all',
-              acceptNecessaryBtn: 'Reject all',
-              showPreferencesBtn: 'Manage preferences',
+              title: 'Cookie Notice',
+              description: 'We use cookies to enhance your experience and analyze site traffic. Learn more in our <a href="/privacy" class="cc-link">Privacy Policy</a> and <a href="/terms" class="cc-link">Terms & Conditions</a>.',
+              acceptAllBtn: 'Accept All',
+              acceptNecessaryBtn: 'Essential Only',
+              showPreferencesBtn: 'Customize',
             },
             preferencesModal: {
-              title: 'Cookie preferences',
-              acceptAllBtn: 'Accept all',
-              acceptNecessaryBtn: 'Reject all',
-              savePreferencesBtn: 'Save preferences',
+              title: 'Cookie Preferences',
+              acceptAllBtn: 'Accept All',
+              acceptNecessaryBtn: 'Essential Only',
+              savePreferencesBtn: 'Save My Choices',
               closeIconLabel: 'Close',
               sections: [
                 {
-                  title: 'Cookie usage',
-                  description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience.',
+                  title: 'Cookie Usage',
+                  description: 'We use cookies to ensure basic functionality and enhance your experience on Placement Quest.',
                 },
                 {
-                  title: 'Strictly necessary cookies',
-                  description: 'These cookies are essential for the proper functioning of the website.',
+                  title: 'Essential Cookies',
+                  description: 'Required for the website to function properly. These cannot be disabled.',
                   linkedCategory: 'necessary',
                 },
                 {
-                  title: 'Analytics cookies',
-                  description: 'These cookies help us understand how visitors interact with the website.',
+                  title: 'Analytics Cookies',
+                  description: 'Help us understand visitor behavior and improve our content.',
                   linkedCategory: 'analytics',
+                },
+                {
+                  title: 'More Information',
+                  description: 'For any questions, please review our <a href="/privacy" class="cc-link">Privacy Policy</a> or <a href="/contact" class="cc-link">contact us</a>.',
                 },
               ],
             },

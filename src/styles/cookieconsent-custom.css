@@ -1,0 +1,219 @@
+/* Custom Cookie Consent Styling to match Placement Quest design */
+
+/* Main consent modal - purple gradient background */
+#cc-main .cm {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95)) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+  color: #fff !important;
+  padding: 24px 32px !important;
+  max-width: 1200px !important;
+  margin: 0 auto 20px !important;
+}
+
+/* Title styling */
+#cc-main .cm__title {
+  color: #fff !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+}
+
+/* Description text */
+#cc-main .cm__desc {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+/* Links in description */
+#cc-main .cc-link {
+  color: #fff !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+  transition: opacity 0.3s !important;
+}
+
+#cc-main .cc-link:hover {
+  opacity: 0.8 !important;
+}
+
+/* Buttons container */
+#cc-main .cm__btns {
+  gap: 12px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+}
+
+/* Primary button (Accept All) */
+#cc-main .cm__btn--primary {
+  background: #fff !important;
+  color: #3730a3 !important;
+  border: none !important;
+  padding: 12px 28px !important;
+  border-radius: 100px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  transition: all 0.3s !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+#cc-main .cm__btn--primary:hover {
+  background: #f5f5f5 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Secondary button (Essential Only) */
+#cc-main .cm__btn--secondary {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  padding: 12px 28px !important;
+  border-radius: 100px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  transition: all 0.3s !important;
+}
+
+#cc-main .cm__btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Customize/Manage button */
+#cc-main .cm__btn {
+  background: transparent !important;
+  color: #fff !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 12px 28px !important;
+  border-radius: 100px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  transition: all 0.3s !important;
+}
+
+#cc-main .cm__btn:hover {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Preferences Modal */
+#cc-main .pm {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+  border: 1px solid rgba(102, 126, 234, 0.3) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+  color: #fff !important;
+  max-width: 500px !important;
+}
+
+/* Preferences modal header */
+#cc-main .pm__header {
+  border-bottom: 1px solid rgba(102, 126, 234, 0.2) !important;
+  padding: 24px !important;
+}
+
+#cc-main .pm__title {
+  color: #fff !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+/* Preferences modal body */
+#cc-main .pm__body {
+  padding: 24px !important;
+}
+
+#cc-main .pm__section {
+  margin-bottom: 24px !important;
+  padding: 20px !important;
+  background: rgba(102, 126, 234, 0.1) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(102, 126, 234, 0.2) !important;
+}
+
+#cc-main .pm__section-title {
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+
+#cc-main .pm__section-desc {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+/* Toggle switches */
+#cc-main .section__toggle {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+#cc-main .section__toggle.toggle--on {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+}
+
+/* Preferences modal footer buttons */
+#cc-main .pm__btn {
+  padding: 12px 24px !important;
+  border-radius: 100px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  transition: all 0.3s !important;
+}
+
+#cc-main .pm__btn--primary {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+#cc-main .pm__btn--primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4) !important;
+}
+
+#cc-main .pm__btn--secondary {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+#cc-main .pm__btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  #cc-main .cm {
+    margin: 0 10px 10px !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+  }
+
+  #cc-main .cm__btns {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  #cc-main .cm__btn,
+  #cc-main .cm__btn--primary,
+  #cc-main .cm__btn--secondary {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  #cc-main .pm {
+    max-width: calc(100vw - 40px) !important;
+    margin: 20px !important;
+  }
+}
