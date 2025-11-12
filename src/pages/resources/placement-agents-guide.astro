@@ -1,0 +1,542 @@
+---
+import SEO from '../../components/SEO.astro';
+import '../../styles/cookieconsent-custom.css';
+
+const pageTitle = 'Free Download: Top Private Equity Placement Agents Guide 2025';
+const pageDescription = 'Download our comprehensive guide to top private equity placement agents. Includes rankings, fee structures, selection criteria, market statistics, and expert insights for PE fundraising success.';
+const pdfUrl = '/pdfs/top-private-equity-placement-agents-guide-2025.pdf';
+
+// Schema markup for the PDF
+const digitalDocumentSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'DigitalDocument',
+  name: 'Top Private Equity Placement Agents Guide 2025',
+  description: 'Comprehensive directory of leading PE placement agents with rankings, fee structures, selection criteria, and market insights',
+  url: `https://placement.quest${pdfUrl}`,
+  datePublished: '2025-01-12',
+  dateModified: '2025-01-12',
+  author: {
+    '@type': 'Organization',
+    name: 'Placement.quest',
+    url: 'https://placement.quest'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Placement.quest',
+    url: 'https://placement.quest'
+  },
+  about: {
+    '@type': 'Thing',
+    name: 'Private Equity Placement Agents'
+  },
+  keywords: 'private equity placement agents, PE fundraising, placement agent directory, capital raising, PE placement agents guide, placement agent fees, placement agent selection',
+  inLanguage: 'en-US',
+  numberOfPages: 30,
+  encodingFormat: 'application/pdf'
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://placement.quest'
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Resources',
+      item: 'https://placement.quest/resources'
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Placement Agents Guide',
+      item: 'https://placement.quest/resources/placement-agents-guide'
+    }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <SEO
+    title={pageTitle}
+    description={pageDescription}
+  />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(digitalDocumentSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 24px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #667eea, #f093fb);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: opacity 0.3s;
+    }
+
+    .nav-links a:hover { opacity: 0.6; }
+
+    /* Hero Section */
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 60px 80px;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(0, 0, 0, 0.8));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=50&auto=format') center/cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      padding: 12px 28px;
+      border-radius: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      margin-bottom: 32px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: clamp(16px, 2vw, 22px);
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 48px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .download-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 24px 48px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      border-radius: 100px;
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+    }
+
+    .download-cta:hover {
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.5);
+    }
+
+    /* Content Section */
+    .content-section {
+      padding: 100px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .content-section h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 900;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .content-section h3 {
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 700;
+      margin: 48px 0 24px 0;
+      color: #667eea;
+    }
+
+    .content-section p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 24px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin: 60px 0;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s;
+    }
+
+    .feature-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(102, 126, 234, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .feature-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h4 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .feature-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin: 60px 0;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #667eea, #f093fb);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .cta-section {
+      padding: 100px 60px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    }
+
+    .cta-section h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 900;
+      margin-bottom: 32px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 80px 60px 40px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, #000 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-section h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 12px;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 20px; }
+      .hero { padding: 120px 20px 60px; }
+      .content-section { padding: 60px 20px; }
+      .cta-section { padding: 60px 20px; }
+      footer { padding: 60px 20px 40px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="/" class="logo">Placement</a>
+    <ul class="nav-links">
+      <li><a href="/articles">Articles</a></li>
+      <li><a href="/private-equity-placement-agents">Placement Agents</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Free Resource • PDF Guide</div>
+      <h1>Top Private Equity Placement Agents Guide 2025</h1>
+      <p>
+        Download our comprehensive 30-page guide featuring leading placement agents, fee structures, selection criteria, market statistics, and expert insights for PE fundraising success.
+      </p>
+      <a href={pdfUrl} download class="download-cta">
+        📥 Download Free Guide (PDF)
+      </a>
+    </div>
+  </section>
+
+  <!-- What's Inside Section -->
+  <section class="content-section">
+    <h2>What's Inside This Guide</h2>
+    <p>
+      Our comprehensive guide provides everything you need to understand and engage with top private equity placement agents for successful PE fundraising.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h4>Featured Top Placement Agents</h4>
+        <p>Detailed profiles of leading placement agents with track records, specializations, and LP networks.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h4>Fee Structures Explained</h4>
+        <p>Complete breakdown of retainer models, success fees, and fee ranges by fund size ($50M to $5B+).</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">✅</div>
+        <h4>Selection Criteria</h4>
+        <p>Expert guidance on evaluating placement agents, red flags to watch for, and due diligence checklists.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h4>Market Statistics</h4>
+        <p>Success rates, typical timelines, LP network sizes, and key benchmarks for PE fundraising.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🗺️</div>
+        <h4>Strategy Coverage</h4>
+        <p>Placement agents categorized by PE strategy: buyout, growth equity, VC, real estate, infrastructure.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h4>Global Coverage</h4>
+        <p>Agents organized by geography: North America, Europe, Asia-Pacific, and emerging markets.</p>
+      </div>
+    </div>
+
+    <h3>Key Statistics Included</h3>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">65-75%</div>
+        <div class="stat-label">Success Rate with Agents</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">12-18</div>
+        <div class="stat-label">Months Average Timeline</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1-2%</div>
+        <div class="stat-label">Typical Fee Range</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">300-500+</div>
+        <div class="stat-label">LP Relationships Per Agent</div>
+      </div>
+    </div>
+
+    <h3>Who This Guide Is For</h3>
+    <p>
+      This guide is designed for General Partners (GPs) seeking to raise capital for private equity funds, whether you're a first-time fund manager or an established GP looking to expand your LP base.
+    </p>
+    <p>
+      It's also valuable for Limited Partners (LPs) researching placement agent relationships and understanding the fundraising ecosystem.
+    </p>
+
+    <h3>Why Download This Guide?</h3>
+    <p>
+      <strong>Save Time:</strong> All essential information about top placement agents in one comprehensive resource.
+    </p>
+    <p>
+      <strong>Make Informed Decisions:</strong> Expert insights help you select the right placement agent for your fund strategy.
+    </p>
+    <p>
+      <strong>Understand Costs:</strong> Transparent fee structure breakdowns help you budget for fundraising expenses.
+    </p>
+    <p>
+      <strong>Benchmark Performance:</strong> Market statistics provide context for your fundraising expectations and timelines.
+    </p>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-section">
+    <h2>Ready to Download?</h2>
+    <p style="margin-bottom: 48px;">
+      Get instant access to the complete guide and start your PE fundraising journey with confidence.
+    </p>
+    <a href={pdfUrl} download class="download-cta">
+      📥 Download Free Guide (PDF)
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Placement</h3>
+        <p style="color: rgba(255, 255, 255, 0.6); margin-top: 12px;">
+          Your definitive private equity placement agents resource.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+          <li><a href="/articles">Articles & Insights</a></li>
+          <li><a href="/private-equity-placement-agents">Agency Directory</a></li>
+          <li><a href="/resources/placement-agents-guide">Free PDF Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul class="footer-links">
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Placement. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
