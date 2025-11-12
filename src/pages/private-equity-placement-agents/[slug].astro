@@ -17,15 +17,24 @@ const companies = await sql`
     slug,
     description,
     founded_year,
+    employee_count,
     headquarters,
     website_url,
     logo_url,
     global_rank,
     specializations,
+    key_facts,
     overview,
     capital_raised_total,
     funds_served,
-    geographic_focus
+    geographic_focus,
+    phone,
+    email,
+    serviced_companies,
+    serviced_deals,
+    serviced_investors,
+    primary_country,
+    primary_region
   FROM companies
   WHERE slug = ${slug}
     AND company_type = 'placement_agent'
@@ -494,6 +503,12 @@ if (!company) {
                 <span>{company.founded_year}</span>
               </div>
             )}
+            {company.employee_count && (
+              <div class="meta-item">
+                <span class="meta-label">Employees:</span>
+                <span>{company.employee_count}</span>
+              </div>
+            )}
             {company.headquarters && company.headquarters !== 'Unavailable from provided context' && (
               <div class="meta-item">
                 <span class="meta-label">Headquarters:</span>
@@ -544,11 +559,69 @@ if (!company) {
             </div>
           </div>
         )}
+
+        {company.key_facts && company.key_facts.people && company.key_facts.people.length > 0 && (
+          <div class="content-card">
+            <h2 class="card-title">Key People</h2>
+            <div class="card-content">
+              <div style="display: grid; gap: 20px;">
+                {company.key_facts.people.map((person: any) => (
+                  <div style="padding: 16px; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
+                    <div style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                      {typeof person === 'string' ? person : person.name}
+                    </div>
+                    {typeof person === 'object' && person.title && (
+                      <div style="font-size: 14px; color: rgba(255, 255, 255, 0.6);">
+                        {person.title}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {(company.phone || company.email) && (
+          <div class="content-card">
+            <h2 class="card-title">Contact Information</h2>
+            <div class="card-content">
+              <div style="display: grid; gap: 16px;">
+                {company.phone && (
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(102, 126, 234, 0.2); border-radius: 10px;">
+                      <span style="font-size: 20px;">📞</span>
+                    </div>
+                    <div>
+                      <div style="font-size: 13px; color: rgba(255, 255, 255, 0.6); margin-bottom: 2px;">Phone</div>
+                      <a href={`tel:${company.phone}`} style="color: #667eea; text-decoration: none; font-weight: 600;">
+                        {company.phone}
+                      </a>
+                    </div>
+                  </div>
+                )}
+                {company.email && (
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(102, 126, 234, 0.2); border-radius: 10px;">
+                      <span style="font-size: 20px;">✉️</span>
+                    </div>
+                    <div>
+                      <div style="font-size: 13px; color: rgba(255, 255, 255, 0.6); margin-bottom: 2px;">Email</div>
+                      <a href={`mailto:${company.email}`} style="color: #667eea; text-decoration: none; font-weight: 600;">
+                        {company.email}
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       <!-- Sidebar -->
       <div class="sidebar">
-        {(company.capital_raised_total || company.funds_served) && (
+        {(company.capital_raised_total || company.funds_served || company.serviced_companies || company.serviced_deals || company.serviced_investors) && (
           <div class="content-card">
             <h3 class="card-title">Key Metrics</h3>
             <div class="metrics-grid">
@@ -564,6 +637,24 @@ if (!company) {
                 <div class="metric-item">
                   <div class="metric-label">Funds Served</div>
                   <div class="metric-value">{company.funds_served}+</div>
+                </div>
+              )}
+              {company.serviced_companies && (
+                <div class="metric-item">
+                  <div class="metric-label">Companies Serviced</div>
+                  <div class="metric-value">{company.serviced_companies}+</div>
+                </div>
+              )}
+              {company.serviced_deals && (
+                <div class="metric-item">
+                  <div class="metric-label">Deals Completed</div>
+                  <div class="metric-value">{company.serviced_deals}+</div>
+                </div>
+              )}
+              {company.serviced_investors && (
+                <div class="metric-item">
+                  <div class="metric-label">Investors Engaged</div>
+                  <div class="metric-value">{company.serviced_investors}+</div>
                 </div>
               )}
             </div>
