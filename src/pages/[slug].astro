@@ -11,10 +11,10 @@ if (!slug) {
 
 // Handle sitemap.xml directly
 if (slug === 'sitemap.xml') {
-  const siteUrl = (Astro.site?.toString() || 'https://placement.quest').replace(/\/$/, '');
+  const siteUrl = (Astro.site?.toString() || 'https://relocation.quest').replace(/\/$/, '');
 
-  const articles = await sql`SELECT slug, published_at, updated_at, created_at FROM articles WHERE app = 'placement' AND status = 'published'`;
-  const companies = await sql`SELECT slug, updated_at, created_at FROM companies WHERE status = 'published' AND company_type = 'placement_agent'`;
+  const articles = await sql`SELECT slug, published_at, updated_at, created_at FROM articles WHERE app = 'relocation' AND status = 'published'`;
+  const companies = await sql`SELECT slug, updated_at, created_at FROM companies WHERE status = 'published' AND company_type = 'relocation_provider'`;
   const now = new Date().toISOString();
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -85,7 +85,7 @@ const articleResult = await sql`
     ) as content4_image_legacy
   FROM articles a
   WHERE a.slug = ${slug}
-    AND a.app = 'placement'
+    AND a.app = 'relocation'
   LIMIT 1
 `;
 

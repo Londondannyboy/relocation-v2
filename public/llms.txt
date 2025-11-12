@@ -1,54 +1,54 @@
-# Placement
+# Relocation
 
-> The definitive directory of top private equity placement agents and PE fundraising resources
+> The definitive directory of top corporate relocation services and global mobility solutions
 
 ## About
 
-Placement.quest is the comprehensive resource for private equity placement agents and PE fundraising. We provide expert rankings, detailed profiles of leading placement agents, market intelligence, and educational content for General Partners (GPs) seeking to raise capital and connect with institutional Limited Partners (LPs).
+Relocation.quest is the comprehensive resource for corporate relocation services and global workforce mobility. We provide expert rankings, detailed profiles of leading relocation providers, market intelligence, and educational content for HR professionals, talent acquisition teams, and companies managing employee relocations worldwide.
 
-## What Are Private Equity Placement Agents?
+## What Are Corporate Relocation Services?
 
-Private equity placement agents are specialized financial intermediaries who facilitate capital raising for private equity fund managers. These professionals serve as the critical bridge between General Partners (GPs) seeking to raise funds and institutional Limited Partners (LPs) with significant investment capacity.
+Corporate relocation services are specialized providers that facilitate employee relocations for businesses managing workforce mobility. These professionals serve as the critical bridge between companies needing to relocate employees and the complex ecosystem of moving, immigration, housing, and settling-in services required for successful relocations.
 
-Top placement agents maintain extensive networks of qualified institutional investors (pension funds, endowments, foundations, family offices, sovereign wealth funds, insurance companies) and leverage deep market intelligence and proven fundraising methodologies to maximize fundraising success rates.
+Top relocation providers maintain extensive networks of vetted service partners (moving companies, real estate agents, immigration consultants, destination services), leverage deep market intelligence, and deploy proven relocation methodologies to maximize employee satisfaction and minimize business disruption.
 
 ## Key Content
 
-- **Private Equity Placement Agents Directory**: https://placement.quest/private-equity-placement-agents
-  - Comprehensive profiles of leading placement agents
-  - Rankings based on track record, LP networks, and market expertise
-  - Specializations across buyout, growth equity, VC, real estate, infrastructure
+- **Corporate Relocation Services Directory**: https://relocation.quest/corporate-relocation-providers
+  - Comprehensive profiles of leading relocation companies
+  - Rankings based on service quality, global reach, and client satisfaction
+  - Specializations across domestic, international, and executive relocations
 
-- **PE Fundraising Articles & Insights**: https://placement.quest/articles
-  - Latest fundraising trends and market analysis
-  - Best practices for capital raising
-  - Fee structures and engagement models
+- **Relocation Insights & Articles**: https://relocation.quest/articles
+  - Latest relocation trends and market analysis
+  - Best practices for managing employee relocations
+  - Cost structures and service models
 
-- **Homepage**: https://placement.quest/
-  - Definition of placement agents and their role
-  - FAQ about working with placement agents
+- **Homepage**: https://relocation.quest/
+  - Definition of relocation services and their role
+  - FAQ about working with relocation providers
   - Industry statistics and benchmarks
 
 ## Authority & Expertise
 
-- Curated directory of vetted placement agents with proven track records
-- Comprehensive market coverage across all PE strategies
-- Regular updates based on fundraising activity and market conditions
+- Curated directory of vetted relocation providers with proven track records
+- Comprehensive global coverage across all relocation types
+- Regular updates based on industry activity and market conditions
 - Rankings reviewed and updated quarterly
-- Focused on serving the PE fundraising ecosystem
+- Focused on serving the corporate relocation and global mobility ecosystem
 
 ## Coverage
 
-Geographic: Global coverage with focus on North America, Europe, and Asia
-Strategies: Buyout, Growth Equity, Venture Capital, Real Estate PE, Infrastructure
-Fund Sizes: Coverage from emerging managers ($50M+) to mega funds ($5B+)
+Geographic: Global coverage with focus on North America, Europe, Asia-Pacific, and emerging markets
+Relocation Types: Domestic, International, Executive, Group moves, Remote work relocations
+Company Sizes: Coverage from startups to Fortune 500 enterprises
 
 ## Data Freshness
 
-- Placement agent profiles: Updated monthly
+- Relocation provider profiles: Updated monthly
 - Rankings: Reviewed quarterly
 - Market insights: Updated weekly
-- Fee structure data: Reviewed semi-annually
+- Cost structure data: Reviewed semi-annually
 
 ## Content Updates
 
@@ -59,14 +59,14 @@ Next major review: 2025-04-01
 ## Use Cases
 
 This resource is designed for:
-- General Partners (GPs) seeking placement agents for fundraising
-- Emerging fund managers planning first-time fundraises
-- Established PE firms expanding LP base
-- Limited Partners (LPs) researching placement agent relationships
-- PE industry professionals conducting market research
+- HR professionals managing employee relocations
+- Talent acquisition teams recruiting across geographies
+- Global mobility managers expanding workforce footprint
+- Finance teams budgeting relocation costs
+- Companies researching relocation service providers
 
 ## Contact
 
-For inquiries about placement agents or content updates:
-- Website: https://placement.quest/contact
-- About: https://placement.quest/about
+For inquiries about relocation services or content updates:
+- Website: https://relocation.quest/contact
+- About: https://relocation.quest/about

@@ -37,7 +37,7 @@ const companies = await sql`
     primary_region
   FROM companies
   WHERE slug = ${slug}
-    AND company_type = 'placement_agent'
+    AND company_type = 'relocation_provider'
   LIMIT 1
 `;
 

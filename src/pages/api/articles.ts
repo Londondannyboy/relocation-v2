@@ -14,7 +14,7 @@ export const GET: APIRoute = async () => {
         article_angle,
         word_count
       FROM articles
-      WHERE app = 'placement'
+      WHERE app = 'relocation'
         AND status = 'published'
       ORDER BY published_at DESC NULLS LAST, created_at DESC
       LIMIT 10

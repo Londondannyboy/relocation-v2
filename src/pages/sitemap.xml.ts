@@ -1,8 +1,8 @@
-// Dynamic sitemap for placement.quest
+// Dynamic sitemap for relocation.quest
 import type { APIRoute } from 'astro';
 import { sql } from '../lib/db';
 
-const BASE_URL = 'https://placement.quest';
+const BASE_URL = 'https://relocation.quest';
 
 // Static pages
 const staticPages = [
@@ -58,7 +58,7 @@ async function generateSitemapXML(): Promise<string> {
         published_at,
         created_at
       FROM articles
-      WHERE app = 'placement'
+      WHERE app = 'relocation'
         AND status = 'published'
       ORDER BY published_at DESC NULLS LAST
     `;
@@ -92,7 +92,7 @@ async function generateSitemapXML(): Promise<string> {
         created_at
       FROM companies
       WHERE status = 'published'
-        AND company_type = 'placement_agent'
+        AND company_type = 'relocation_provider'
       ORDER BY name ASC
     `;
 

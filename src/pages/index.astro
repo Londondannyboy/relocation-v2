@@ -8,11 +8,11 @@ import '../styles/cookieconsent-custom.css';
 const homepageContent = await sql`
   SELECT section_type, title, subtitle, content
   FROM homepage_content
-  WHERE site = 'placement' AND is_active = true
+  WHERE site = 'relocation' AND is_active = true
   ORDER BY section_order ASC
 `;
 
-// Fetch companies - filter for placement agents
+// Fetch companies - filter for relocation providers
 const companies = await sql`
   SELECT
     name,
@@ -24,7 +24,7 @@ const companies = await sql`
     global_rank
   FROM companies
   WHERE status = 'published'
-    AND company_type = 'placement_agent'
+    AND company_type = 'relocation_provider'
   ORDER BY
     CASE WHEN global_rank IS NOT NULL THEN 0 ELSE 1 END,
     global_rank ASC NULLS LAST,
@@ -40,7 +40,7 @@ const articles = await sql`
     slug,
     published_at
   FROM articles
-  WHERE app = 'placement'
+  WHERE app = 'relocation'
     AND status = 'published'
   ORDER BY published_at DESC NULLS LAST
   LIMIT 3
@@ -1426,10 +1426,10 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
 <body>
   <!-- Navigation -->
   <nav>
-    <a href="/" class="logo">Placement</a>
+    <a href="/" class="logo">Relocation</a>
     <ul class="nav-links">
       <li><a href="/articles">Articles</a></li>
-      <li><a href="/private-equity-placement-agents">Placement Agents</a></li>
+      <li><a href="/corporate-relocation-providers">Relocation Services</a></li>
     </ul>
   </nav>
 
@@ -1442,16 +1442,16 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
       <div class="hero-badge">The Definitive Industry Resource</div>
 
       <h1>
-        Find Top Private Equity Placement Agents
+        Find Top Corporate Relocation Services
       </h1>
 
       <p class="hero-subtitle">
-        Discover top private equity placement agents and PE fundraising experts. Expert rankings, capital raising insights, and comprehensive market intelligence.
+        Discover top corporate relocation services and global mobility experts. Expert rankings, cost insights, and comprehensive market intelligence for workforce relocations.
       </p>
 
       <div class="hero-cta">
-        <a href="/private-equity-placement-agents" class="btn btn-primary">Find Private Equity Placement Agents →</a>
-        <a href="/articles" class="btn btn-secondary">Read Fundraising Insights</a>
+        <a href="/corporate-relocation-providers" class="btn btn-primary">Find Relocation Providers →</a>
+        <a href="/articles" class="btn btn-secondary">Read Relocation Insights</a>
       </div>
     </div>
   </section>
@@ -1470,92 +1470,92 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
     </section>
   )}
 
-  <!-- Definition Section - What Are Top Private Equity Placement Agents -->
+  <!-- Definition Section - What Are Top Corporate Relocation Services -->
   <section class="content-section gradient animated">
-    <h2 class="section-title">What Are Top Private Equity Placement Agents?</h2>
+    <h2 class="section-title">What Are Top Corporate Relocation Services?</h2>
     <div class="intro-content">
       <p>
-        <a href="https://www.investopedia.com/terms/p/privateequity.asp" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(102, 126, 234, 0.3);">Private equity</a> is an alternative investment class where investors acquire equity ownership in private companies or buy out public companies to take them private.
+        <a href="https://www.shrm.org/topics-tools/tools/toolkits/managing-relocation" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(102, 126, 234, 0.3);">Corporate relocation</a> is the process of moving employees from one location to another for business purposes, whether domestically or internationally.
       </p>
       <p>
-        As the <a href="https://en.wikipedia.org/wiki/Private_equity" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(102, 126, 234, 0.3);">private equity industry</a> has grown to manage over $4.5 trillion in assets globally, the role of specialized intermediaries has become increasingly critical.
+        As the <a href="https://www.worldwideerca.org/" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(102, 126, 234, 0.3);">global mobility industry</a> has evolved to manage millions of corporate relocations annually, the role of specialized service providers has become increasingly vital.
       </p>
       <p>
-        Despite <a href="https://www.bbc.co.uk/programmes/p00n4sk4" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(102, 126, 234, 0.3);">ongoing debates</a> about private equity's impact on portfolio companies and the broader economy, institutional investors continue to allocate significant capital to PE funds.
+        With <a href="https://www.forbes.com/sites/forbeshumanresourcescouncil/2024/02/15/the-future-of-work-remote-relocation-and-global-mobility/" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(102, 126, 234, 0.3);">remote work trends</a> reshaping where employees live and work, companies increasingly rely on expert guidance to manage workforce mobility efficiently.
       </p>
       <p>
-        Within this dynamic landscape, top private equity placement agents serve as specialized financial intermediaries who facilitate capital raising for private equity fund managers.
+        Within this dynamic landscape, top corporate relocation services serve as specialized providers who facilitate employee relocations for companies managing global workforce mobility.
       </p>
       <p>
-        These elite professionals serve as the critical bridge between General Partners (GPs) seeking to raise funds and institutional Limited Partners (LPs) with significant investment capacity.
+        These expert providers serve as the critical bridge between companies needing to relocate employees and the complex ecosystem of services required for successful relocations.
       </p>
       <p>
-        The best placement agents maintain extensive networks of qualified institutional investors, including pension funds, endowments, foundations, family offices, sovereign wealth funds, and insurance companies.
+        The best relocation providers maintain extensive networks of vetted service partners, including moving companies, real estate agents, immigration consultants, and destination service providers.
       </p>
       <p>
-        They leverage deep market intelligence, proven fundraising methodologies, and established LP relationships to maximize fundraising success rates.
+        They leverage deep market intelligence, proven relocation methodologies, and established partner relationships to maximize employee satisfaction and minimize business disruption.
       </p>
 
-      <h3 style="font-size: 28px; font-weight: 700; margin: 48px 0 24px 0; color: #fff;">Why Work With Top Private Equity Placement Agents?</h3>
+      <h3 style="font-size: 28px; font-weight: 700; margin: 48px 0 24px 0; color: #fff;">Why Work With Top Corporate Relocation Services?</h3>
       <p>
-        Engaging top private equity placement agents provides fund managers with several strategic advantages.
+        Engaging top corporate relocation services provides HR and mobility teams with several strategic advantages.
       </p>
       <p>
-        These experienced professionals bring sophisticated market knowledge, help craft compelling investment narratives, and provide access to LP networks that would take years to develop independently.
+        These experienced professionals bring sophisticated market knowledge, help streamline complex logistics, and provide access to service networks that would take years to develop independently.
       </p>
       <p>
-        Leading placement agents also offer valuable guidance on fund structuring, terms negotiation, and competitive positioning within the crowded PE fundraising landscape.
+        Leading relocation providers also offer valuable guidance on policy design, cost optimization, and employee experience enhancement within the evolving global mobility landscape.
       </p>
 
       <div class="items-grid" style="margin-top: 40px;">
         <div class="item-card">
-          <h3>Extensive LP Networks</h3>
-          <p>Top private equity placement agents maintain relationships with 300-500+ institutional investors globally.</p>
-          <p>This provides immediate access to qualified LPs actively seeking PE investment opportunities.</p>
+          <h3>Extensive Service Networks</h3>
+          <p>Top relocation providers maintain partnerships with 500+ vetted service providers globally.</p>
+          <p>This provides immediate access to quality moving, real estate, immigration, and destination services.</p>
         </div>
         <div class="item-card">
           <h3>Market Intelligence</h3>
-          <p>Leading placement agents offer real-time insights into LP preferences, market conditions, and competitive fundraising activity.</p>
-          <p>This includes optimal timing strategies for successful capital raises.</p>
+          <p>Leading relocation services offer real-time insights into housing markets, cost of living, and regulatory requirements.</p>
+          <p>This includes optimal timing strategies for successful employee transitions.</p>
         </div>
         <div class="item-card">
-          <h3>Fundraising Expertise</h3>
-          <p>Elite placement agents bring decades of experience structuring funds and positioning strategies.</p>
-          <p>They navigate the complex dynamics of institutional capital raising across market cycles.</p>
+          <h3>Relocation Expertise</h3>
+          <p>Elite relocation providers bring decades of experience managing complex international and domestic moves.</p>
+          <p>They navigate immigration, tax, and compliance complexities across global markets.</p>
         </div>
       </div>
 
       <h3 style="font-size: 28px; font-weight: 700; margin: 56px 0 32px 0; color: #fff;">Key Statistics & Benchmarks</h3>
       <div class="items-grid">
         <div class="item-card">
-          <h3>Success Rates</h3>
-          <p><strong>65-75%</strong> of funds using top private equity placement agents close at or above their target fundraising amount.</p>
-          <p>This compares to 40-50% for funds raising independently.</p>
+          <h3>Employee Satisfaction</h3>
+          <p><strong>85-90%</strong> of employees using top relocation services report positive relocation experiences.</p>
+          <p>This compares to 60-70% for self-managed relocations.</p>
         </div>
         <div class="item-card">
           <h3>Typical Timeline</h3>
-          <p>Average fundraising cycle with placement agents: <strong>12-18 months</strong> from initial kickoff to final close.</p>
-          <p>First LP conversations to first commitment typically takes 4-6 months.</p>
+          <p>Average domestic relocation: <strong>30-60 days</strong>. International moves: <strong>90-180 days</strong> including visa processing.</p>
+          <p>Executive relocations with comprehensive services add 30-60 days.</p>
         </div>
         <div class="item-card">
-          <h3>Fee Structures</h3>
-          <p>Standard fees range from <strong>1-2%</strong> of capital raised for mid-to-large funds.</p>
-          <p>Smaller funds ($50-250M) typically pay 2-3%, while mega funds ($2B+) pay 0.75-1.25%.</p>
+          <h3>Cost Structures</h3>
+          <p>Domestic relocations: <strong>$5K-$75K</strong> depending on level. International: <strong>$20K-$200K+</strong>.</p>
+          <p>Lump sum programs range from $5K-$25K per employee.</p>
         </div>
         <div class="item-card">
-          <h3>LP Network Size</h3>
-          <p>Leading placement agents maintain active relationships with <strong>200-500+</strong> institutional investors.</p>
-          <p>This includes pension funds, endowments, foundations, and sovereign wealth funds.</p>
+          <h3>Service Partner Network</h3>
+          <p>Leading relocation providers maintain active relationships with <strong>500+</strong> vetted service partners.</p>
+          <p>This includes moving companies, real estate agents, immigration consultants, and destination service providers.</p>
         </div>
         <div class="item-card">
-          <h3>Market Coverage</h3>
-          <p>Top placement agents specialize across all major PE strategies: buyout, growth equity, venture capital, real estate, and infrastructure.</p>
-          <p>Many maintain <strong>global reach</strong> with regional expertise.</p>
+          <h3>Global Coverage</h3>
+          <p>Top relocation services cover all major relocation types: domestic, international, executive, and group moves.</p>
+          <p>Many maintain <strong>100+ country coverage</strong> with regional expertise.</p>
         </div>
         <div class="item-card">
-          <h3>Engagement Models</h3>
-          <p>Common structures include <strong>retainer models</strong> ($25-50K monthly + 0.5-1% success fee).</p>
-          <p>Alternative arrangements include <strong>success-fee-only</strong> models (2-3% of capital raised).</p>
+          <h3>Service Models</h3>
+          <p>Common structures include <strong>managed services</strong> (full coordination) and <strong>lump sum</strong> programs.</p>
+          <p>Tiered programs offer different service levels by employee role and seniority.</p>
         </div>
       </div>
     </div>
@@ -1599,18 +1599,18 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
     <div class="pdf-guide-content">
       <div class="pdf-guide-badge">Free Resource</div>
       <h2>Download Our Comprehensive Guide</h2>
-      <h3>Top Private Equity Placement Agents Guide 2025</h3>
+      <h3>Top Corporate Relocation Services Guide 2025</h3>
       <p>
-        Get instant access to our 30-page guide featuring leading placement agents, fee structures, selection criteria, market statistics, and expert insights for successful PE fundraising.
+        Get instant access to our comprehensive guide featuring leading relocation providers, cost structures, selection criteria, market statistics, and expert insights for successful workforce mobility.
       </p>
       <div class="pdf-features">
         <div class="pdf-feature">
           <span class="pdf-icon">🏆</span>
-          <span>Featured Top Agents</span>
+          <span>Featured Top Providers</span>
         </div>
         <div class="pdf-feature">
           <span class="pdf-icon">💰</span>
-          <span>Fee Breakdowns</span>
+          <span>Cost Breakdowns</span>
         </div>
         <div class="pdf-feature">
           <span class="pdf-icon">📊</span>
@@ -1621,7 +1621,7 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
           <span>Selection Criteria</span>
         </div>
       </div>
-      <a href="/resources/placement-agents-guide" class="btn btn-primary" style="padding: 24px 54px; font-size: 18px;">
+      <a href="/resources/relocation-services-guide" class="btn btn-primary" style="padding: 24px 54px; font-size: 18px;">
         Download Free PDF Guide →
       </a>
     </div>
@@ -1633,15 +1633,15 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
     <div class="stats-grid">
       <div class="stat-item">
         <div class="stat-title">Curated<br>Excellence</div>
-        <div class="stat-label">Top private equity placement agents vetted for fundraising success, market expertise, and proven LP networks</div>
+        <div class="stat-label">Top corporate relocation services vetted for service quality, global reach, and proven employee satisfaction</div>
       </div>
       <div class="stat-item">
-        <div class="stat-title">Fundraising<br>Intelligence</div>
-        <div class="stat-label">Comprehensive market data from top private equity placement agents, including deal metrics and PE fundraising insights</div>
+        <div class="stat-title">Global Mobility<br>Intelligence</div>
+        <div class="stat-label">Comprehensive market data from top relocation providers, including cost benchmarks and mobility insights</div>
       </div>
       <div class="stat-item">
         <div class="stat-title">Expert<br>Guidance</div>
-        <div class="stat-label">Strategic counsel from the world's leading private equity placement agents and fundraising advisors</div>
+        <div class="stat-label">Strategic counsel from the world's leading relocation services and global mobility advisors</div>
       </div>
     </div>
   </section>
@@ -1667,51 +1667,51 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
     </section>
   )}
 
-  <!-- Portfolio Item - Capital Raising -->
+  <!-- Portfolio Item - Corporate Relocation -->
   <section class="portfolio-section">
     <div style="max-width: 1400px; margin: 0 auto; padding: 80px 60px 40px;">
       <h2 style="font-size: clamp(36px, 5vw, 56px); font-weight: 900; margin-bottom: 24px; text-align: center; line-height: 1.2;">
-        The Role of Private Equity Placement Agents
+        The Role of Corporate Relocation Services
       </h2>
       <div style="max-width: 900px; margin: 0 auto; text-align: center;">
         <p style="font-size: 18px; line-height: 1.8; color: rgba(255, 255, 255, 0.85); margin-bottom: 20px;">
-          Private equity placement agents are specialized investment banking firms that act as intermediaries between general partners (GPs) seeking to raise capital and institutional limited partners (LPs) with capital to deploy.
+          Corporate relocation services are specialized providers that act as intermediaries between companies needing to relocate employees and the complex network of service partners required for successful moves.
         </p>
         <p style="font-size: 18px; line-height: 1.8; color: rgba(255, 255, 255, 0.85); margin-bottom: 20px;">
-          These firms provide critical fundraising support to private equity funds, venture capital funds, infrastructure funds, and other alternative investment vehicles.
+          These firms provide critical relocation support including moving services, housing assistance, immigration coordination, and destination services for domestic and international employee relocations.
         </p>
         <p style="font-size: 17px; line-height: 1.8; color: rgba(255, 255, 255, 0.75);">
-          The placement agent market has evolved significantly since the 1980s. What began as a niche service has transformed into a sophisticated, multi-billion dollar industry essential to the private capital markets ecosystem. Today's top placement agents combine deep institutional relationships, market intelligence, regulatory expertise, and strategic positioning to help fund managers successfully close on their target fundraise amounts.
+          The corporate relocation industry has evolved significantly over the past decades. What began as basic moving services has transformed into a sophisticated, technology-enabled industry essential to global workforce mobility. Today's top relocation providers combine extensive service networks, real-time market intelligence, compliance expertise, and white-glove service to help companies successfully transition employees across the globe.
         </p>
       </div>
     </div>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1200&q=50&auto=format" alt="Top private equity placement agents - Capital Raising" title="Connect with top private equity placement agents for capital raising" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1200&q=50&auto=format" alt="Top corporate relocation services - Employee Moving" title="Connect with top corporate relocation services for employee moves" loading="lazy" decoding="async">
         <div class="portfolio-overlay">
-          <div class="portfolio-title">Capital Raising</div>
-          <div class="portfolio-desc">Connect with premier <strong>private equity placement agents</strong> specializing in PE fundraising</div>
+          <div class="portfolio-title">Employee Relocation</div>
+          <div class="portfolio-desc">Connect with premier <strong>relocation services</strong> specializing in workforce mobility</div>
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=50&auto=format" alt="Leading PE fundraising experts and top placement agents" title="Top private equity placement agents for fund marketing" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=50&auto=format" alt="Leading global mobility experts and top relocation providers" title="Top corporate relocation services for international moves" loading="lazy" decoding="async">
         <div class="portfolio-overlay">
-          <div class="portfolio-title">Fund Marketing</div>
-          <div class="portfolio-desc">Access leading <strong>PE fundraising experts</strong> for top-tier administrative talent</div>
+          <div class="portfolio-title">Global Mobility</div>
+          <div class="portfolio-desc">Access leading <strong>global mobility experts</strong> for international relocations</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Top Placement Agents Section -->
+  <!-- Top Relocation Providers Section -->
   {companies && companies.length > 0 && (
     <section class="content-section dark has-background top-agents animated">
-      <h2 class="section-title">Top Private Equity Placement Agents</h2>
-      <p class="section-subtitle">Leading placement agents connecting GPs with LPs for successful fundraising outcomes</p>
+      <h2 class="section-title">Top Corporate Relocation Services</h2>
+      <p class="section-subtitle">Leading relocation providers helping companies manage global workforce mobility</p>
 
       <div class="agents-grid">
         {companies.map((company: any) => (
-          <a href={`/private-equity-placement-agents/${company.slug}`} style="text-decoration: none;">
+          <a href={`/corporate-relocation-providers/${company.slug}`} style="text-decoration: none;">
             <div class="agent-card">
               <h3 class="agent-name">{company.name}</h3>
               {company.headquarters && (
@@ -1738,7 +1738,7 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
       </div>
 
       <div style="text-align: center; margin-top: 48px;">
-        <a href="/private-equity-placement-agents" class="btn btn-primary">View All Placement Agents</a>
+        <a href="/corporate-relocation-providers" class="btn btn-primary">View All Relocation Providers</a>
       </div>
 
       <!-- Industry Rankings & Recognition Subsection -->
@@ -1747,67 +1747,67 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
           Industry Rankings & Recognition
         </h3>
         <p style="text-align: center; font-size: 18px; color: rgba(255, 255, 255, 0.8); max-width: 900px; margin: 0 auto 48px auto; line-height: 1.8;">
-          According to Preqin's 2025 Service Provider Report, the leading private equity placement agents are recognized for their exceptional fundraising track records and extensive LP networks.
+          According to WERC's 2025 Industry Report, the leading corporate relocation services are recognized for their exceptional service quality, global reach, and client satisfaction.
         </p>
 
         <div class="items-grid">
           <div class="item-card">
-            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">Evercore</h3>
+            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">Cartus</h3>
             <p style="margin-bottom: 8px;">
-              <strong>60+ funds closed</strong> with over <strong>$50B in capital raised</strong>
+              <strong>100K+ relocations annually</strong> across <strong>185+ countries</strong>
             </p>
             <p style="font-size: 14px; color: rgba(255, 255, 255, 0.7);">
-              Consistently ranked as one of the top global placement agents by Preqin
+              Consistently ranked as one of the top global relocation providers by industry surveys
             </p>
           </div>
 
           <div class="item-card">
-            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">PJT Park Hill</h3>
+            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">SIRVA</h3>
             <p style="margin-bottom: 8px;">
-              <strong>50+ funds closed</strong> with over <strong>$40B in capital raised</strong>
+              <strong>50K+ relocations annually</strong> across <strong>150+ countries</strong>
             </p>
             <p style="font-size: 14px; color: rgba(255, 255, 255, 0.7);">
-              Leading advisor to private capital fund managers globally
+              Leading global relocation and moving services company
             </p>
           </div>
 
           <div class="item-card">
-            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">Greenstone Equity Partners</h3>
+            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">Crown World Mobility</h3>
             <p style="margin-bottom: 8px;">
-              <strong>Ranked #7 Globally</strong> with <strong>27 funds closed</strong>
+              <strong>160+ office locations</strong> in <strong>60+ countries</strong>
             </p>
             <p style="font-size: 14px; color: rgba(255, 255, 255, 0.7);">
-              The only placement firm headquartered in the GCC to appear in Preqin's global rankings
+              One of the largest independent relocation and moving companies worldwide
             </p>
           </div>
 
           <div class="item-card">
-            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">Campbell Lutyens</h3>
+            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">Santa Fe Relocation Services</h3>
             <p style="margin-bottom: 8px;">
-              <strong>Leading independent</strong> placement agent and fund advisory firm
+              <strong>Leading independent</strong> relocation and mobility services firm
             </p>
             <p style="font-size: 14px; color: rgba(255, 255, 255, 0.7);">
-              Extensive track record across private equity, infrastructure, and real assets
+              Extensive track record across domestic, international, and executive relocations
             </p>
           </div>
 
           <div class="item-card">
-            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">Rede Partners</h3>
+            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">Allied Pickfords</h3>
             <p style="margin-bottom: 8px;">
-              <strong>Boutique specialist</strong> focused on emerging managers
+              <strong>Boutique specialist</strong> for high-touch executive relocations
             </p>
             <p style="font-size: 14px; color: rgba(255, 255, 255, 0.7);">
-              Strong reputation for first-time and smaller fund placements
+              Strong reputation for premium service and global mobility solutions
             </p>
           </div>
 
           <div class="item-card">
-            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">Eaton Partners</h3>
+            <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px;">Aires</h3>
             <p style="margin-bottom: 8px;">
-              <strong>Part of Morgan Stanley</strong> with global distribution capabilities
+              <strong>Technology-enabled</strong> relocation management services
             </p>
             <p style="font-size: 14px; color: rgba(255, 255, 255, 0.7);">
-              One of the largest placement agent networks worldwide
+              One of the largest domestic and international relocation providers in North America
             </p>
           </div>
         </div>
@@ -2066,25 +2066,25 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
 
     <div class="companies-content">
       <div class="section-header">
-        <h2>Top Private Equity Placement Agents Directory</h2>
+        <h2>Top Corporate Relocation Services Directory</h2>
         <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">
-          Placement agents serve as the vital bridge between General Partners (GPs) seeking capital and Limited Partners (LPs) with investment capacity.
+          Relocation services serve as the vital bridge between companies managing workforce mobility and the complex ecosystem of moving, housing, and immigration services.
         </p>
         <p style="font-size: 18px; line-height: 1.8; margin-bottom: 32px;">
-          These specialized intermediaries leverage extensive LP networks, market intelligence, and fundraising expertise to facilitate successful capital raises.
+          These specialized providers leverage extensive service networks, global expertise, and proven relocation methodologies to facilitate successful employee transitions.
         </p>
         <p style="font-size: 16px; line-height: 1.7; color: rgba(255, 255, 255, 0.8); margin-bottom: 12px;">
-          Our curated directory features leading placement agents across all major PE strategies—buyout, growth equity, venture capital, real estate, and infrastructure.
+          Our curated directory features leading relocation providers across all move types—domestic, international, executive, and group relocations.
         </p>
         <p style="font-size: 16px; line-height: 1.7; color: rgba(255, 255, 255, 0.8);">
-          Whether you're a first-time fund manager or an established GP looking to expand your LP base, connect with the right placement partner to accelerate your fundraising success.
+          Whether you're an HR manager planning your first relocation program or a global mobility leader optimizing your vendor network, connect with the right relocation partner for successful employee transitions.
         </p>
       </div>
 
       {companies.length > 0 ? (
         <div class="companies-grid">
           {companies.map((company: any) => (
-            <a href={`/private-equity-placement-agents/${company.slug}`} style="text-decoration: none; color: inherit;">
+            <a href={`/corporate-relocation-providers/${company.slug}`} style="text-decoration: none; color: inherit;">
               <div class="company-card">
                 <div class="company-header">
                   <div>
@@ -2117,13 +2117,13 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
       ) : (
         <div class="empty-state">
           <h3>Coming Soon</h3>
-          <p>We're currently curating the finest placement agents. Check back soon!</p>
+          <p>We're currently curating the finest relocation providers. Check back soon!</p>
         </div>
       )}
 
       {companies.length > 0 && (
         <div style="text-align: center; margin-top: 48px;">
-          <a href="/private-equity-placement-agents" class="btn btn-primary">Explore All Placement Agents</a>
+          <a href="/corporate-relocation-providers" class="btn btn-primary">Explore All Relocation Providers</a>
         </div>
       )}
     </div>
@@ -2152,55 +2152,55 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
   <section class="services-section animated">
     <div class="section-header">
       <h2>Our Services</h2>
-      <p>Comprehensive recruitment solutions from top private equity placement agents and PE fundraising experts tailored to your organization's needs</p>
+      <p>Comprehensive relocation solutions from top corporate relocation providers and global mobility experts tailored to your organization's needs</p>
     </div>
 
     <div class="services-grid">
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=50&auto=format" alt="Top private equity placement agents - Executive Search" title="Executive search services from top PE placement agents" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=50&auto=format" alt="Top corporate relocation services - Domestic Moves" title="Domestic relocation services from top providers" loading="lazy" decoding="async">
         <div class="service-overlay">
-          <div class="service-title">Executive Search</div>
-          <div class="service-desc">Identifying and recruiting top-tier Placement talent for C-suite roles</div>
+          <div class="service-title">Domestic Relocation</div>
+          <div class="service-desc">Within-country moves with comprehensive household goods and housing support</div>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=50&auto=format" alt="Leadership assessment by top private equity placement agents" title="Top placement agents providing leadership assessment services" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=50&auto=format" alt="International relocation by top corporate services" title="Top relocation providers offering international moves" loading="lazy" decoding="async">
         <div class="service-overlay">
-          <div class="service-title">Leadership Assessment</div>
-          <div class="service-desc">Comprehensive evaluation and profiling of executive candidates</div>
+          <div class="service-title">International Relocation</div>
+          <div class="service-desc">Cross-border moves with immigration, visa, and destination services</div>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=50&auto=format" alt="Talent advisory from leading PE placement agents" title="Top private equity placement agents offering talent advisory" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=50&auto=format" alt="Executive relocation from leading providers" title="Top corporate relocation services for executives" loading="lazy" decoding="async">
         <div class="service-overlay">
-          <div class="service-title">Talent Advisory</div>
-          <div class="service-desc">Strategic guidance on organizational structure and leadership needs</div>
+          <div class="service-title">Executive Relocation</div>
+          <div class="service-desc">White-glove service for C-suite and senior leadership transitions</div>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=50&auto=format" alt="Market Insights" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=50&auto=format" alt="Global Mobility Consulting" loading="lazy" decoding="async">
         <div class="service-overlay">
-          <div class="service-title">Market Insights</div>
-          <div class="service-desc">Comprehensive salary benchmarking and industry trend analysis</div>
+          <div class="service-title">Global Mobility Consulting</div>
+          <div class="service-desc">Strategic policy design, cost optimization, and program management</div>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=50&auto=format" alt="Succession Planning" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=50&auto=format" alt="Immigration Services" loading="lazy" decoding="async">
         <div class="service-overlay">
-          <div class="service-title">Succession Planning</div>
-          <div class="service-desc">Building robust leadership pipelines for long-term organizational success</div>
+          <div class="service-title">Immigration Services</div>
+          <div class="service-desc">Visa processing, work permits, and immigration compliance support</div>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&q=50&auto=format" alt="Onboarding Support" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&q=50&auto=format" alt="Destination Services" loading="lazy" decoding="async">
         <div class="service-overlay">
-          <div class="service-title">Onboarding Support</div>
-          <div class="service-desc">Ensuring seamless integration and success for new Placement hires</div>
+          <div class="service-title">Destination Services</div>
+          <div class="service-desc">Home finding, school search, and settling-in support for relocating families</div>
         </div>
       </div>
     </div>
@@ -2208,13 +2208,13 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
 
   <!-- CTA Section -->
   <section class="cta-section">
-    <h2>Ready to Find Your<br>Perfect Match?</h2>
+    <h2>Ready to Find Your<br>Perfect Partner?</h2>
     <p>
-      Connect with top private equity placement agents and take the next step<br>
-      in your PE fundraising journey with proven industry experts
+      Connect with top corporate relocation services and take the next step<br>
+      in your global mobility journey with proven industry experts
     </p>
     <div class="hero-cta">
-      <a href="/private-equity-placement-agents" class="btn btn-primary">Browse Top Placement Agents</a>
+      <a href="/corporate-relocation-providers" class="btn btn-primary">Browse Top Relocation Providers</a>
       <a href="/articles" class="btn btn-secondary">Read Our Guides</a>
     </div>
   </section>
@@ -2223,12 +2223,12 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
   <footer>
     <div class="footer-content">
       <div class="footer-section">
-        <h3>Placement</h3>
+        <h3>Relocation</h3>
         <p style="color: rgba(255, 255, 255, 0.6); margin-top: 12px;">
-          Your definitive private equity placement agents news source.
+          Your definitive corporate relocation services resource.
         </p>
         <p style="margin-top: 16px;">
-          <a href="/" style="color: #667eea; text-decoration: none; font-weight: 600;">Top Private Equity Placement Agents</a>
+          <a href="/" style="color: #667eea; text-decoration: none; font-weight: 600;">Top Corporate Relocation Services</a>
         </p>
       </div>
 
@@ -2236,8 +2236,8 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
         <h3>Resources</h3>
         <ul class="footer-links">
           <li><a href="/articles">Articles & Insights</a></li>
-          <li><a href="/private-equity-placement-agents">Agency Directory</a></li>
-          <li><a href="/resources/placement-agents-guide">Free PDF Guide</a></li>
+          <li><a href="/corporate-relocation-providers">Provider Directory</a></li>
+          <li><a href="/resources/relocation-services-guide">Free PDF Guide</a></li>
         </ul>
       </div>
 
@@ -2259,7 +2259,7 @@ const muxPlaybackId = 'ZdBjAaWzf4UvDAa9bvBikfP00btysIpiwHq016LSwYZeg';
     </div>
 
     <div class="footer-bottom">
-      <p>© 2025 Placement. All rights reserved.</p>
+      <p>© 2025 Relocation. All rights reserved.</p>
     </div>
   </footer>
 
