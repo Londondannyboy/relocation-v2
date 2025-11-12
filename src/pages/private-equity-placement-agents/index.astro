@@ -403,9 +403,9 @@ console.log('Filtered companies:', filteredCompanies.length);
 
   <!-- Companies Section -->
   <section class="companies-section">
-    {companies.length > 0 ? (
+    {filteredCompanies.length > 0 ? (
       <div class="companies-grid">
-        {companies.map((company: any) => (
+        {filteredCompanies.map((company: any) => (
           <a href={`/private-equity-placement-agents/${company.slug}`} class="company-card">
             <div class="company-header">
               <div style="flex: 1;">
