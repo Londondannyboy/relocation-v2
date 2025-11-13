@@ -12,13 +12,13 @@ const staticPages = [
   '/articles',
   '/privacy',
   '/terms',
-  '/private-equity-placement-agents',
-  '/resources/placement-agents-guide',
+  '/corporate-relocation-providers',
+  '/resources/relocation-services-guide',
 ];
 
 // PDF files (important for LLM ranking!)
 const pdfFiles = [
-  '/pdfs/top-private-equity-placement-agents-guide-2025.pdf',
+  '/pdfs/top-corporate-relocation-services-guide-2025.pdf',
 ];
 
 // LLM context files (both are best practice per llmstxt.org spec)
@@ -104,7 +104,7 @@ async function generateSitemapXML(): Promise<string> {
 
       xml += `
   <url>
-    <loc>${BASE_URL}/private-equity-placement-agents/${company.slug}</loc>
+    <loc>${BASE_URL}/corporate-relocation-providers/${company.slug}</loc>
     <lastmod>${formattedDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
